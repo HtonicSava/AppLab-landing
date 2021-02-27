@@ -1,0 +1,757 @@
+//VARS
+
+$blue: #2500f9
+$darkblue: #242f51
+$red: #f55767
+$grey: #e2eaed
+$greytext: #616368
+$green: #40975f
+
+html
+    font-size: 16px
+
+body
+    font-family: 'Poppins', sans-serif
+    font-size: 1rem // 16px
+    line-height: 1.5
+    color: $greytext
+    font-weight: 500
+
+.button
+    color: #ffffff
+    background: $blue
+    padding: 1.05rem 2.3rem
+    border-radius: 2rem
+    transition: background .2s linear
+    display: inline-block
+    font-weight: 600
+    cursor: pointer
+    &:hover
+        background: $red
+
+.container
+    width: 100%
+    max-width: 1200px
+    padding: 0px 0.97rem
+    margin: 0 auto
+
+.green
+    color: $green
+.red
+    color: $red
+.blue
+    color: $blue
+
+// MENU
+
+.menu__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 1.875rem
+
+.nav
+    display: flex
+    align-items: center
+
+.nav__link
+    margin-right: 2rem
+    color: $darkblue
+    position: relative
+    font-weight: 600
+
+    &::after
+        top: 1.5rem
+        left: 0
+        display: block
+        position: absolute
+        content: ""
+        width: 0
+        height: 2px
+        transition: width .2s linear
+        background-color: $darkblue
+
+    &:hover
+        &::after
+            width: 100%
+
+// MENU-MEDIA
+
+.menu__inner
+    @media screen and (max-width: 880px)
+        flex-direction: column
+
+.nav
+    @media screen and (max-width: 880px)
+        flex-direction: column
+        margin-top: 0.8rem
+
+.nav__link
+    @media screen and (max-width: 880px)
+        margin-right: 0
+        margin-bottom: 0.8rem
+
+// firstssect
+
+.firstssect
+    background-color: #fdfdfe
+    background-image: url("img/1secback.png")
+    background-repeat: no-repeat
+    background-size: cover
+    margin-bottom: 6rem
+    padding-bottom: 1rem
+    height: 100vh
+
+.firstssect__inner
+    display: flex
+    align-items: center
+
+.infocard
+    padding: 0 8rem
+
+.phonepicture__img
+    max-width: 100%
+
+.infocard__award
+    display: inline-block
+    padding: 0.4rem 2.6rem
+    margin-bottom: 1.5rem
+    border-radius: 1.1rem
+    background-color: $grey
+    font-weight: 600
+    background-image: url("img/awardicon.png")
+    background-repeat: no-repeat
+
+.infocard__title
+    font-size: 3rem
+    font-weight: 600
+    margin-bottom: 3rem
+    color: $darkblue
+
+.infocard__subtitle
+    margin-bottom: 3rem
+
+.infocard__link
+    margin-left: 1rem
+    color: $blue
+    font-weight: 600
+    display: inline-block
+
+// firstsec-media
+
+.firstssect
+    @media screen and (max-width: 820px)
+        height: auto
+
+.firstssect__inner
+    @media screen and (max-width: 820px)
+        flex-direction: column
+
+.infocard
+    @media screen and (max-width: 1080px)
+        padding: 0 0rem
+    @media screen and (max-width: 820px)
+        text-align: center
+
+.infocard__link
+    @media screen and (max-width: 365px)
+        margin-left: 0
+        margin-top: 1rem
+
+// TRUSTED BY
+
+.trustedby__title
+    text-align: center
+    font-weight: 600
+    color: $darkblue
+
+.trustedby__inner
+    padding: 2rem 0rem
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-bottom: 5rem
+
+.trustedby__item
+    max-width: 100%
+    margin: 2rem 3rem
+
+// FEATURES
+
+.features__inner
+    display: flex
+    justify-content: center
+
+    .list
+        padding: 4rem 0rem
+
+    .item
+        display: flex
+        align-items: center
+        margin-bottom: 4rem
+        .item__text
+            padding-left: 1.9rem
+            width: 60%
+
+            .item__title
+                font-weight: 600
+                margin-bottom: 0.5rem
+
+.features__picure
+    flex-grow: 1
+    flex-basis: 50%
+    img
+        max-width: 100%
+
+.features__text
+    flex-grow: 1
+    flex-basis: 50%
+
+.features__title
+    font-size: 2rem
+    font-weight: 700
+    color: $darkblue
+    width: 60%
+    margin-bottom: 1rem
+
+.features__subtitle
+    width: 80%
+
+// FEATURES MEDIA
+
+.features__inner
+    @media screen and (max-width: 720px)
+        flex-direction: column
+
+.features__title
+    @media screen and (max-width: 720px)
+        width: 100%
+        text-align: center
+
+.features__subtitle
+    @media screen and (max-width: 720px)
+        width: 100%
+        text-align: center
+
+// JACKPOTS
+
+.jackpots__top
+    display: flex
+    align-items: center
+    margin-bottom: 1rem
+
+.jackpots__title
+    font-size: 2.5rem
+    font-weight: 700
+    color: $darkblue
+
+.jackpots__subscribtion
+    border-left: 3px solid $grey
+    padding: 0rem 2rem
+    align-self: stretch
+    height: auto
+    display: flex
+    align-items: center
+
+.jackpots__cards
+    padding: 2rem 0rem 4rem 0rem
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+    .card
+        flex-basis: 16.25rem
+        margin: 1rem 2rem
+
+        img
+            margin-bottom: 2rem
+        .card__title
+
+            font-weight: 600
+            margin-bottom: 0.5rem
+
+// JACKPOTS MEDIA
+
+.jackpots__top
+    @media screen and (max-width: 720px)
+        flex-direction: column
+
+.jackpots__title
+    @media screen and (max-width: 720px)
+        font-size: 1.5rem
+        margin-bottom: 3rem
+        text-align: center
+
+.jackpots__subscribtion
+    @media screen and (max-width: 720px)
+        border-left: 3px solid $grey
+        border-right: 3px solid $grey
+        padding: 0rem 1rem
+
+// codeintegration
+.codeintegration
+    border-bottom: 3px solid $grey
+
+.codeintegration__inner
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    padding-bottom: 5rem
+
+    .picture
+        flex-basis: 50%
+        flex-grow: 1
+        img
+            max-width: 100%
+
+    .textblock
+        flex-basis: 50%
+        padding: 5%
+        flex-grow: 1
+
+    .textblock__title
+        font-size: 2.5rem
+        font-weight: 700
+        color: $darkblue
+        margin-bottom: 1rem
+
+    .textblock__text
+        margin-bottom: 2rem
+
+// OURAPP
+
+.ourapp__inner
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 10rem 0rem 5rem 0rem
+
+    .itemtable
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+    .item
+        flex-basis: 30%
+        flex-grow: 1
+        padding: 0rem 2rem 3rem 2rem
+
+    .item__picture
+        display: flex
+        justify-content: center
+        margin-bottom: 1rem
+        img
+            max-width: 100%
+
+    .item__title
+        font-size: 1.5rem
+        font-weight: 700
+        color: $darkblue
+        margin-bottom: 1rem
+        text-align: center
+
+    .item__subtitle
+        margin-bottom: 2rem
+        text-align: center
+
+.ourapp__title
+    text-align: center
+    font-size: 2.5rem
+    font-weight: 700
+    color: $darkblue
+    max-width: 35rem
+    margin-bottom: 2rem
+
+.ourapp__subtitle
+    max-width: 40rem
+    text-align: center
+    margin-bottom: 4rem
+
+// ultfeatures
+
+.ultfeatures__inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .textblock
+        flex-basis: 50%
+        flex-grow: 1
+
+    .textblock__title
+        font-size: 2.5rem
+        font-weight: 700
+        color: $darkblue
+        max-width: 35rem
+        margin-bottom: 2rem
+        margin-left: 2rem
+
+    .textblock__subtitle
+        margin-bottom: 4rem
+        margin-left: 2rem
+
+    .list
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+    .item
+        flex-basis: 50%
+        flex-grow: 1
+        padding: 0rem 2rem 3rem 2rem
+
+    .item__title
+        font-size: 1.5rem
+        font-weight: 700
+        color: $darkblue
+        margin-bottom: 1rem
+
+    .item__subtitle
+        margin-bottom: 2rem
+
+    .picture
+        flex-basis: 50%
+        flex-grow: 1
+        display: flex
+        align-items: center
+        img
+            max-width: 100%
+            min-width: 496px
+            @media screen and (max-width: 496px)
+                min-width: 0
+
+.ultfeatures
+    .button
+        margin-left: 2rem
+
+// PAY
+
+.pay
+    .pay__title
+
+        font-size: 2.5rem
+        font-weight: 700
+        color: $darkblue
+        max-width: 45rem
+        margin-bottom: 2rem
+
+    .pay__subtitle
+        max-width: 45rem
+        margin-bottom: 2rem
+
+    .pay__text
+        margin-top: 8rem
+        text-align: center
+        display: flex
+        flex-direction: column
+
+        align-items: center
+
+    .pay__items
+
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        padding: 4rem 0rem
+        align-items: baseline
+
+    .item
+        flex-basis: 19.5rem
+        box-shadow: 0 0 10px rgba(0,0,0,0.25)
+        margin: 4rem 2rem
+        border-radius: 2rem
+        border: 3px solid $grey
+        transition: box-shadow, .2s linear
+
+        height: auto
+
+        &:hover
+            box-shadow: none
+
+    .item__top
+        background: linear-gradient(to top, #f7f7f7, #ffffff)
+        padding: 3rem 2rem 1rem 2rem
+        text-align: center
+        border-radius: 2rem 2rem 0 0
+
+    .suptitle
+        opacity: 0.8
+        margin-bottom: 1rem
+
+    .price
+        font-size: 3rem
+        font-weight: 700
+        color: $darkblue
+
+    .title
+        font-weight: 700
+        color: $darkblue
+        font-size: 1.2rem
+
+    .subtitle
+        opacity: 0.8
+        margin-bottom: 2.5rem
+
+    .item__bot
+        padding: 1rem 2rem
+        text-align: center
+
+    .string
+        opacity: 0.8
+        margin-top: 1.5rem
+
+    .button
+        margin-top: 2.5rem
+
+    a
+        margin-top: 2rem
+        display: none
+
+    .active
+        display: block
+
+// SATISFACTION
+
+.satisfaction
+    padding: 8rem 0
+    border-top: 3px solid $grey
+    .satisfaction__content
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    .satisfaction__picture
+        flex-basis: 50%
+        img
+            width: auto
+            max-width: 100%
+
+    .satisfaction__text
+
+        flex-basis: 50%
+
+        .title
+            font-size: 2.5rem
+            font-weight: 700
+            color: $darkblue
+
+        .stars
+            margin-bottom: 1rem
+            img
+                width: auto
+                max-width: 100%
+
+        .subtitle
+            font-weight: 700
+            color: $darkblue
+            font-size: 1.2rem
+
+        .text
+            margin: 1.5rem 0
+
+    .person
+
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .profile
+            display: flex
+            align-items: center
+
+        .profile__img
+            width: auto
+            max-width: 100%
+
+        .profile__text
+            margin-left: 2rem
+
+        .profile__title
+            font-weight: 700
+            color: $darkblue
+            font-size: 1.2rem
+
+        .profile__subtitle
+
+        .arrows
+            display: flex
+            padding: 0rem 1rem
+
+            .arrow
+                padding: 0.7rem 1rem
+                color: $grey
+                font-size: 1.2rem
+                border: 1px solid $grey
+                border-radius: 3rem
+
+                &:first-child
+                    margin-right: 1rem
+
+                &:hover
+                    background-color: $grey
+                    color: $blue
+                    cursor: pointer
+
+// SATISFACTION MEDIA
+.satisfaction
+    .satisfaction__content
+        @media screen and (max-width: 720px)
+            flex-direction: column
+
+    .satisfaction__picture
+        @media screen and (max-width: 720px)
+            margin-bottom: 2rem
+
+// QUESTIONS
+.fquestions
+    border-bottom: 3px solid $grey
+
+    .fquestions__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-bottom: 6rem
+
+    .title
+        font-size: 2.5rem
+        font-weight: 700
+        color: $darkblue
+        text-align: center
+
+    .subtitle
+        width: 55%
+        text-align: center
+        margin: 3rem 0rem
+
+    .questions
+        width: 100%
+    .questions__item
+        background-color: $grey
+        padding: 0rem 2rem
+        margin: auto
+        margin-bottom: 0.5rem
+        width: 75%
+
+        .title
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+        .title__text
+            font-weight: 700
+            color: $darkblue
+            font-size: 1.2rem
+
+        .title__button
+            cursor: pointer
+            font-weight: 300
+            font-style: normal
+            font-size: 2rem
+
+        .qtext
+            display: none
+
+        .qtext__active
+            display: block
+
+            padding: 1rem 4rem 2rem 0
+
+// QUESTIONS MEDIA
+.fquestions
+
+    .subtitle
+        @media screen and (max-width: 720px)
+            width: 80%
+
+    .questions__item
+        @media screen and (max-width: 720px)
+            width: 100%
+
+// DOWNLOAD
+
+.download
+
+    .download__content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 2rem 0rem
+
+    .download__picture
+
+        img
+            width: auto
+            max-width: 100%
+
+    .download__text
+
+        .title
+            font-size: 2.5rem
+            font-weight: 700
+            color: $darkblue
+
+        .subtitle
+            margin: 2rem 0rem
+
+    .links
+        display: flex
+        img
+            width: auto
+            max-width: 100%
+
+    .links__item
+
+        cursor: pointer
+
+        &:first-child
+            margin-right: 2rem
+
+// DOWNLOAD MEDIA
+.download
+    .download__content
+        @media screen and (max-width: 720px)
+            flex-direction: column
+
+    .links
+        @media screen and (max-width: 720px)
+            flex-direction: column
+            align-items: center
+
+    .links__item
+
+        &:first-child
+            @media screen and (max-width: 720px)
+                margin-right: 0rem
+                margin-bottom: 2rem
+
+// FOOTER
+
+.footer
+    background-color: $darkblue
+
+    .footer__inner
+
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 2rem 0rem
+
+    .footer__logo
+        width: auto
+        max-width: 100%
+        cursor: pointer
+        margin-bottom: 2rem
+
+    .copyright
+        margin-bottom: 1rem
+        text-align: center
+
+    .nav
+        margin-bottom: 2rem
+
+    .nav__link
+        color: $grey
+        &::after
+
+            background-color: $grey
